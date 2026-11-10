@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="en">
     <head>
+		<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#04558C">
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
@@ -306,6 +308,11 @@
             }  
         });       
         setBounds();
-        </script>        
+        </script>  
+		<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("sw.js");
+}
+</script>
     </body>
 </html>
